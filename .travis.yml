@@ -8,14 +8,14 @@ install: "pip install plotly"
 
 before_install:
    #- git clone --depth=50 --branch=master https://github.com/fredrik-johansson/flint2.git
-   - git clone https://github.com/fredrik-johansson/flint2.git
-   - cd flint2
-   - ./configure
+   - "git clone https://github.com/fredrik-johansson/flint2.git"
+   - "cd flint2"
+   - "./configure"
 
 #script: pytest
 #script: make test
 script:
-    - pwd
-    - cd ..
-    - pwd
-    - python python_test.py
+    - "pwd"
+    - "cd .."
+    - "pwd"
+    - "python python_test.py"
