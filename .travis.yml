@@ -14,4 +14,8 @@ before_install:
 
 #script: pytest
 #script: make test
-script: python python_test.py
+script:
+    - pwd
+    - cd
+    - pwd
+    - python python_test.py
