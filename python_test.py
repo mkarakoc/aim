@@ -1,5 +1,5 @@
 # travis ci
 # python_test.py
-print "test of python"
+for i in range(10):
+  print i, "test of python"
 
-print "test of python"*2
