@@ -7,5 +7,6 @@ python:
 ##install: "pip install plotly"
 
 before_install:
+  - "sudo apt-get install tree"
   - "pwd"
   - "tree -L 1 ~/"
