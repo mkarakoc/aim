@@ -1,6 +1,6 @@
 # https://docs.travis-ci.com/user/languages/python/
 
-dist: xenial
+dist: trusty
 
 language: python
 python:
