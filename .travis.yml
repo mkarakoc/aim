@@ -45,7 +45,7 @@ before_install:
    - "git clone https://github.com/fredrik-johansson/python-flint.git"
    - "cd ./python-flint"
    - "python ./setup.py build_ext --include-dirs=~/build/mkarakoc/aim/flint2:~/build/mkarakoc/aim/arb --library-dirs=~/build/mkarakoc/aim/flint2:~/build/mkarakoc/aim/arb"
-   - "sudo python setup.py installsudo python setup.py install"
+   - "sudo python setup.py install"
    - "cd ../"
 #script: pytest
 #script: make test
