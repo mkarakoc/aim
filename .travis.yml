@@ -40,6 +40,11 @@ before_install:
    - "make"
    - "sudo make install"
    - "cd ../"
+   # python-flint
+   - "sudo apt-get install cython python-dev"
+   - "git clone https://github.com/fredrik-johansson/python-flint.git"
+   - "cd ./python-flint"
+   - "python ./setup.py build_ext --include-dirs=/home/fredrik/src/flint2:/home/fredrik/src/arb --library-dirs=/home/fredrik/src/flint2:/home/fredrik/src/arb"
 
 #script: pytest
 #script: make test
