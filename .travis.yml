@@ -1,8 +1,8 @@
 # https://docs.travis-ci.com/user/languages/python/
 
 env:
-	  - distribution: ubuntu
-	    version: 16.04
+  - distribution: ubuntu
+    version: 16.04
 
 language: python
 python:
