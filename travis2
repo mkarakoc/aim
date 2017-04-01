@@ -1,0 +1,55 @@
+# https://docs.travis-ci.com/user/languages/python/
+
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+##install: "pip install plotly"
+
+before_install:
+   # GMP LIB
+   - "wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2"
+   - "tar -xvf gmp-6.1.2.tar.bz2"
+   - "rm -f gmp-6.1.2.tar.bz2"
+   - "cd ./gmp-6.1.2/"
+   - "./configure"
+   - "make"
+   - "sudo make install"
+   - "cd ../"
+   # MPFR
+   - "wget http://www.mpfr.org/mpfr-current/mpfr-3.1.5.tar.gz"
+   - "tar -xvf mpfr-3.1.5.tar.gz"
+   - "rm -f mpfr-3.1.5.tar.gz"
+   - "cd ./mpfr-3.1.5/"
+   - "./configure"
+   - "make"
+   - "sudo make install"
+   - "cd ../"
+   # FLINT2
+   #- git clone --depth=50 --branch=master https://github.com/fredrik-johansson/flint2.git
+   - "git clone https://github.com/fredrik-johansson/flint2.git"
+   - "cd ./flint2/"
+   - "./configure"
+   - "make"
+   - "sudo make install"
+   - "cd ../"
+   # ARB
+   - "git clone https://github.com/fredrik-johansson/arb.git"
+   - "cd ./arb/"
+   - "./configure"
+   - "make"
+   - "sudo make install"
+   - "cd ../"
+   # python-flint
+   - "sudo apt-get install cython python-dev"
+   - "git clone https://github.com/fredrik-johansson/python-flint.git"
+   - "cd ./python-flint"
+   - "python ./setup.py build_ext --include-dirs=/home/fredrik/src/flint2:/home/fredrik/src/arb --library-dirs=/home/fredrik/src/flint2:/home/fredrik/src/arb"
+
+#script: pytest
+#script: make test
+script:
+    - "pwd"
+    - "python python_test.py"
+
+# END .travis.yml
