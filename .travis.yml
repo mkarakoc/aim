@@ -8,3 +8,4 @@ python:
 
 before_install:
   - "pwd"
+  - "tree -L 1 ~/"
