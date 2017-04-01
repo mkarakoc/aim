@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 # travis ci
 # python_test.py
 
