@@ -11,7 +11,8 @@ before_install:
    - "wget http://www.mpfr.org/mpfr-current/mpfr-3.1.5.tar.gz"
    - "tar -xvf mpfr-3.1.5.tar.gz"
    - "rm -f mpfr-3.1.5.tar.gz"
-   - "cd mpfr-3.1.5"
+   - "cd mpfr-3.1.5/"
+   - "./configure"
    - "make"
    #- git clone --depth=50 --branch=master https://github.com/fredrik-johansson/flint2.git
    - "git clone https://github.com/fredrik-johansson/flint2.git"
