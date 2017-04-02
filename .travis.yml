@@ -50,7 +50,8 @@ before_install:
    #- "sudo cp ~/build/mkarakoc/aim/flint2/qadic/CPimport.txt /usr/local/share/flint/CPimport.txt"
    #- "export LD_LIBRARY_PATH=~/build/mkarakoc/aim/flint2:~/build/mkarakoc/aim/arb:$LD_LIBRARY_PATH"
    #- "sudo python ./setup.py build_ext --include-dirs=~/build/mkarakoc/aim/flint2:~/build/mkarakoc/aim/arb --library-dirs=~/build/mkarakoc/aim/flint2:~/build/mkarakoc/aim/arb"
-   - "sudo python setup.py build_ext"
+   - "sudo python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb"
+   #- "sudo python setup.py build_ext"
    - "sudo python setup.py install"
    - "cd ../"
    
