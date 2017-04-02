@@ -61,6 +61,6 @@ before_install:
 #script: make test
 script:
     - "pwd"
-    - "python python_test.py"
+    - "sudo python python_test.py"
 
 # END .travis.yml
