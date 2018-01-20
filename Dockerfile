@@ -20,10 +20,10 @@ RUN pip install plotly
 
 
 # GMP LIB
-RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2 \
- && tar -xvf gmp-6.1.2.tar.bz2 \
- $$ rm -f gmp-6.1.2.tar.bz2 \
- $$ cd ./gmp-6.1.2/ \
+RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
+RUN tar -xvf gmp-6.1.2.tar.bz2 \
+RUN rm -f gmp-6.1.2.tar.bz2 \
+RUN cd ./gmp-6.1.2/ \
  $$ ./configure \
  $$ make \
  $$ sudo make install \
