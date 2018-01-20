@@ -17,3 +17,14 @@ RUN jupyter notebook --generate-config
 ADD jupyter_notebook_config.py jupyter_notebook_config.py
 RUN cp jupyter_notebook_config.py /home/main/.jupyter/
 RUN pip install plotly
+
+
+# GMP LIB
+RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
+RUN tar -xvf gmp-6.1.2.tar.bz2
+RUN rm -f gmp-6.1.2.tar.bz2
+RUN cd ./gmp-6.1.2/
+RUN ./configure
+RUN make
+RUN sudo make install
+RUN cd ../
