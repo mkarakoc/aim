@@ -41,3 +41,27 @@ RUN cd ./mpfr-3.1.5/ \
  && make
  && make install"
  && cd ../
+
+# FLINT2
+#- git clone --depth=50 --branch=master https://github.com/fredrik-johansson/flint2.git
+RUN git clone https://github.com/fredrik-johansson/flint2.git
+RUN cd ./flint2/ \
+ && ./configure
+ && make
+ && make install
+ && cd ../
+# ARB
+RUN git clone https://github.com/fredrik-johansson/arb.git
+RUN cd ./arb/ \
+ && ./configure
+ && make
+ && make install
+ && cd ../
+# python-flint
+RUN apt-get -y install cython python-dev
+RUN git clone https://github.com/fredrik-johansson/python-flint.git
+RUN cd ./python-flint \
+ && export LD_LIBRARY_PATH=/usr/local/include/flint:/usr/local/include/arb:$LD_LIBRARY_PATH
+ && python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb
+ && python setup.py install
+ && cd ../
