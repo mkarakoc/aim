@@ -20,7 +20,7 @@ RUN pip install plotly
 
 # M4: macro processing language
 RUN apt-get update
-RUN apt-get install m4
+RUN apt-get -y install m4
 
 # GMP LIB
 RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
