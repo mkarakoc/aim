@@ -33,10 +33,10 @@ RUN cd ./gmp-6.1.2/ \
  && cd ../
 
 # MPFR
-RUN wget http://www.mpfr.org/mpfr-current/mpfr-3.1.5.tar.gz
-RUN tar -xvf mpfr-3.1.5.tar.gz
-RUN rm -f mpfr-3.1.5.tar.gz
-RUN cd ./mpfr-3.1.5/ \
+RUN wget http://www.mpfr.org/mpfr-current/mpfr-4.0.0.tar.gz
+RUN tar -xvf mpfr-4.0.0.tar.gz
+RUN rm -f mpfr-4.0.0.tar.gz
+RUN cd ./mpfr-4.0.0/ \
  && ./configure \
  && make \
  && make install \
