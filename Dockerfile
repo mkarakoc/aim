@@ -11,7 +11,7 @@ USER root
 ##ADD start-notebook.sh start-notebook.sh
 ##RUN chmod +x ~/start-notebook.sh
 
-USER main
+#USER main
 
 RUN jupyter notebook --generate-config
 ADD jupyter_notebook_config.py jupyter_notebook_config.py
