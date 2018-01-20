@@ -19,7 +19,7 @@ RUN cp jupyter_notebook_config.py /home/main/.jupyter/
 RUN pip install plotly
 
 # M4: macro processing language
-RUN sudo apt-get install m4
+RUN apt-get install m4
 
 # GMP LIB
 RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
@@ -28,5 +28,5 @@ RUN rm -f gmp-6.1.2.tar.bz2
 RUN cd ./gmp-6.1.2/ \
  && ./configure \
  && make \
- && sudo make install \
+ && make install \
  && cd ../
