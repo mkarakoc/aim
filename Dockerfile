@@ -19,6 +19,7 @@ RUN cp jupyter_notebook_config.py /home/main/.jupyter/
 RUN pip install plotly
 
 # M4: macro processing language
+RUN apt-get update
 RUN apt-get install m4
 
 # GMP LIB
