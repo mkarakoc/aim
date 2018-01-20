@@ -59,9 +59,10 @@ RUN cd ./arb/ \
  && cd ../
 # python-flint
 RUN apt-get -y install cython python-dev
-RUN git clone https://github.com/fredrik-johansson/python-flint.git
-RUN cd ./python-flint \
- && export LD_LIBRARY_PATH=/usr/local/include/flint:/usr/local/include/arb:$LD_LIBRARY_PATH \
- && python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb \
- && python setup.py install \
- && cd ../
+RUN pip install python-flint
+#RUN git clone https://github.com/fredrik-johansson/python-flint.git
+#RUN cd ./python-flint \
+# && export LD_LIBRARY_PATH=/usr/local/include/flint:/usr/local/include/arb:$LD_LIBRARY_PATH \
+# && python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb \
+# && python setup.py install \
+# && cd ../
