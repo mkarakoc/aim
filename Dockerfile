@@ -39,7 +39,7 @@ RUN rm -f mpfr-3.1.5.tar.gz
 RUN cd ./mpfr-3.1.5/ \
  && ./configure
  && make
- && make install"
+ && make install
  && cd ../
 
 # FLINT2
