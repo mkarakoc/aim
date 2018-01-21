@@ -5,11 +5,8 @@ MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
 #### ROOT USER ####
 USER root
 
-RUN python --version
 RUN apt-get update && \
       apt-get -y install sudo
-
-RUN apt-get -y install python3-pip
 
 #RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
 RUN echo "main:main" | chpasswd && adduser main sudo
@@ -18,11 +15,6 @@ RUN echo "main:main" | chpasswd && adduser main sudo
 RUN passwd --delete main
 #### MAIN USER ####
 USER main
-
-RUN pip3 --version
-RUN sudo pip3 install --upgrade pip3
-RUN pip3 --version
-RUN sudo pip3 install python-flint
 
 RUN jupyter notebook --generate-config
 ADD jupyter_notebook_config.py jupyter_notebook_config.py
@@ -56,11 +48,11 @@ RUN cd ./arb/ && ./configure && make && sudo make install && cd ../
 
 # python-flint
 RUN sudo apt-get -y install cython python-dev
-RUN sudo pip install python-flint
+# RUN sudo pip install python-flint
 
-#RUN git clone https://github.com/fredrik-johansson/python-flint.git
-#RUN cd ./python-flint \
-# && export LD_LIBRARY_PATH=/usr/local/include/flint:/usr/local/include/arb:$LD_LIBRARY_PATH \
-# && python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb \
-# && python setup.py install \
-# && cd ../
+RUN git clone https://github.com/fredrik-johansson/python-flint.git
+RUN cd ./python-flint \
+ && export LD_LIBRARY_PATH=/usr/local/include/flint:/usr/local/include/arb:$LD_LIBRARY_PATH \
+ && python ./setup.py build_ext --include-dirs=/usr/local/include/flint:/usr/local/include/arb --library-dirs=/usr/local/include/flint:/usr/local/include/arb \
+ && python setup.py install \
+ && cd ../
