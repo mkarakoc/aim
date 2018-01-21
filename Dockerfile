@@ -16,6 +16,8 @@ RUN passwd --delete main
 #### MAIN USER ####
 USER main
 
+RUN pip --version
+RUN pip3 --version
 RUN sudo pip3 install python-flint
 
 RUN jupyter notebook --generate-config
