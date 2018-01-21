@@ -11,6 +11,8 @@ RUN apt-get update && \
 #RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
 RUN echo "main:main" | chpasswd && adduser main sudo
 
+#### without password
+passwd --delete main
 #### MAIN USER ####
 USER main
 
