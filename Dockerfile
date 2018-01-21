@@ -52,8 +52,8 @@ RUN sudo apt-get -y install cython python-dev
 
 RUN git clone https://github.com/fredrik-johansson/python-flint.git
 RUN cd ./python-flint \
- && export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH \
  && python ./setup.py build_ext --include-dirs=/home/main/flint2:/home/main/arb --library-dirs=/home/main/flint2:/home/main/arb \
  && python setup.py install \
+ && export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH \
  && cd ../
  
