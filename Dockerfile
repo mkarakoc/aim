@@ -5,11 +5,11 @@ MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
 #### ROOT USER ####
 USER root
 
-RUN python3 --version
-RUN apt-get -y install python3-pip
-
+RUN python --version
 RUN apt-get update && \
       apt-get -y install sudo
+
+RUN apt-get -y install python3-pip
 
 #RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
 RUN echo "main:main" | chpasswd && adduser main sudo
