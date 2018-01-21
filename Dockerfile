@@ -8,7 +8,8 @@ USER root
 RUN apt-get update && \
       apt-get -y install sudo
 
-RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
+#RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
+RUN echo "main:main" | chpasswd && adduser main sudo
 
 #### MAIN USER ####
 USER main
