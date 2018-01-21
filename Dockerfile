@@ -19,7 +19,8 @@ RUN passwd --delete main
 #### MAIN USER ####
 USER main
 
-RUN pip --version
+RUN pip3 --version
+RUN sudo pip3 install --upgrade pip3
 RUN pip3 --version
 RUN sudo pip3 install python-flint
 
