@@ -56,4 +56,17 @@ RUN cd ./python-flint \
  && python setup.py install \
  && cd ../
  
+# flint path for PYTHON 2
 ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH
+
+# flint path solution for Jupyter (python 2 kernel)
+RUN cp /home/main/flint2/libflint.so.13 anaconda2/lib/ \
+ && cp -rf /home/main/arb/libarb.so.2* /home/main/anaconda2/lib/
+
+# flint path for PYTHON 3 (I hope)
+RUN sudo pip install python-flint
+
+# symengine python 2 and 3
+RUN sudo pip2 install symengine
+RUN sudo pip install symengine
+
