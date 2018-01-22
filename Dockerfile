@@ -69,5 +69,5 @@ RUN sudo pip --version
 
 # symengine python 2 and 3
 #RUN sudo pip2 install symengine
-RUN sudo pip install symengine
+#RUN sudo pip install symengine
 
