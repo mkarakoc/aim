@@ -1,6 +1,7 @@
-FROM andrewosh/binder-base
+#FROM andrewosh/binder-base
+FROM ubuntu:17.04
 
-MAINTAINER Jeremy Freeman <freeman.jeremy@gmail.com>
+MAINTAINER Mesut Karakoç <...@gmail.com>
 
 #### ROOT USER ####
 USER root
