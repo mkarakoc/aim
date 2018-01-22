@@ -56,4 +56,4 @@ RUN cd ./python-flint \
  && python setup.py install \
  && cd ../
  
-ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH \
+ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH
