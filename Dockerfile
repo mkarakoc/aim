@@ -54,6 +54,6 @@ RUN git clone https://github.com/fredrik-johansson/python-flint.git
 RUN cd ./python-flint \
  && python ./setup.py build_ext --include-dirs=/home/main/flint2:/home/main/arb --library-dirs=/home/main/flint2:/home/main/arb \
  && python setup.py install \
- && export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH \
  && cd ../
  
+ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH \
