@@ -1,5 +1,4 @@
-#FROM andrewosh/binder-base
-FROM ubuntu:17.04
+FROM andrewosh/binder-base
 
 MAINTAINER Mesut Karakoç <...@gmail.com>
 
