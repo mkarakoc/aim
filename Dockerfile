@@ -1,12 +1,15 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Mesut Karakoç <...@gmail.com>
+MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
 #### ROOT USER ####
 USER root
+###################
 
-RUN apt-get update && \
-      apt-get -y install sudo
+RUN apt-get --no-install-recommends update \
+ && apt-get --no-install-recommends -y install \
+            sudo \
+            apt-utils
 
 #RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
 RUN echo "main:main" | chpasswd && adduser main sudo
@@ -15,6 +18,7 @@ RUN echo "main:main" | chpasswd && adduser main sudo
 RUN passwd --delete main
 #### MAIN USER ####
 USER main
+###################
 
 RUN jupyter notebook --generate-config
 ADD jupyter_notebook_config.py jupyter_notebook_config.py
@@ -22,8 +26,7 @@ RUN cp jupyter_notebook_config.py /home/main/.jupyter/
 RUN sudo pip install plotly
 
 # M4: macro processing language
-RUN sudo apt-get update
-RUN sudo apt-get -y install m4
+RUN sudo apt-get --no-install-recommends -y install m4
 
 # GMP LIB
 RUN wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
@@ -46,9 +49,10 @@ RUN cd ./flint2/ && ./configure && make && sudo make install && cd ../
 RUN git clone https://github.com/fredrik-johansson/arb.git
 RUN cd ./arb/ && ./configure && make && sudo make install && cd ../
 
+##############
 # python-flint
-RUN sudo apt-get -y install cython python-dev
-# RUN sudo pip install python-flint
+##############
+RUN sudo apt-get --no-install-recommends -y install cython python-dev
 
 RUN git clone https://github.com/fredrik-johansson/python-flint.git
 RUN cd ./python-flint \
@@ -57,17 +61,14 @@ RUN cd ./python-flint \
  && cd ../
  
 # flint path for PYTHON 2
-ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH
-
-# flint path solution for Jupyter (python 2 kernel)
+#ENV export LD_LIBRARY_PATH=/home/main/flint2:/home/main/arb:$LD_LIBRARY_PATH
 RUN cp /home/main/flint2/libflint.so.13 anaconda2/lib/ \
  && cp -rf /home/main/arb/libarb.so.2* /home/main/anaconda2/lib/
 
 # flint path for PYTHON 3 (I hope)
-#RUN sudo pip install python-flint
-RUN sudo pip --version
+RUN sudo /home/main/anaconda2/envs/python3/bin/pip install python-flint
 
 # symengine python 2 and 3
-#RUN sudo pip2 install symengine
-#RUN sudo pip install symengine
+RUN sudo /home/main/anaconda2/bin/pip install symengine
+RUN sudo /home/main/anaconda2/envs/python3/bin/pip install symengine
 
