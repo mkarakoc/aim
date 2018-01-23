@@ -11,11 +11,11 @@ RUN apt-get --no-install-recommends update \
             sudo \
             apt-utils
 
+#### make MAIN user passwordless
 #RUN useradd -m main && echo "main:main" | chpasswd && adduser main sudo
 RUN echo "main:main" | chpasswd && adduser main sudo
-
-#### without password
 RUN passwd --delete main
+
 #### MAIN USER ####
 USER main
 ###################
