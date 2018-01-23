@@ -20,11 +20,6 @@ RUN passwd --delete main
 USER main
 ###################
 
-# jupyter notebook
-RUN jupyter notebook --generate-config
-ADD jupyter_notebook_config.py jupyter_notebook_config.py
-RUN cp jupyter_notebook_config.py /home/main/.jupyter/
-
 # M4: macro processing language
 RUN sudo apt-get --no-install-recommends -y install m4
 
@@ -80,11 +75,18 @@ RUN sudo /home/main/anaconda2/envs/python3/bin/pip install plotly
 RUN sudo /home/main/anaconda2/bin/pip install symengine
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install symengine
 
+# jupyter notebook
+RUN jupyter notebook --generate-config
+ADD jupyter_notebook_config.py jupyter_notebook_config.py
+RUN cp jupyter_notebook_config.py /home/main/.jupyter/
+
 # jupyter nbextensions (install)
 RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
 RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
+RUN sudo pip install jupyter_contrib_nbextensions
+RUN sudo pip install jupyter_nbextensions_configurator
 
 # jupyter nbextensions (enable)
 RUN jupyter-nbextensions_configurator enable --user
