@@ -81,10 +81,11 @@ RUN sudo /home/main/anaconda2/bin/pip install symengine
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install symengine
 
 # jupyter nbextensions (install)
-RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
-RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
-RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
-RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
+#RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
+#RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
+#RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
+#RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
 
 # jupyter nbextensions (enable)
-RUN jupyter-nbextensions_configurator enable
+#RUN jupyter-nbextensions_configurator enable --user
+RUN sudo conda install -c conda-forge jupyter_nbextensions_configurator
