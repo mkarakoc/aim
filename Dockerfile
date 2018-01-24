@@ -97,3 +97,20 @@ RUN cp -rf \
 
 # jupyter nbextensions (enable)
 RUN jupyter-nbextensions_configurator enable --user
+
+# enable spesific nbextension from start
+RUN \
+     jupyter nbextension enable hide_input_all/main \
+  && jupyter nbextension enable livemdpreview/livemdpreview \
+  && jupyter nbextension enable rubberband/main \   
+  && jupyter nbextension enable toc2/main \   
+  && jupyter nbextension enable varInspector/main \   
+  && jupyter nbextension enable varInspector/main \   
+  && jupyter nbextension enable collapsible_headings/main \   
+  && jupyter nbextension enable hinterland/hinterland \   
+  && jupyter nbextension enable snippets_menu/main \   
+  && jupyter nbextension enable execute_time/ExecuteTime \   
+  && jupyter nbextension enable hide_input/main \   
+  && jupyter nbextension enable runtools/main \   
+  && jupyter nbextension enable toggle_all_line_numbers/main  
+  
