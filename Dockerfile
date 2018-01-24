@@ -85,8 +85,13 @@ RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
 RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
-#RUN sudo pip install jupyter_contrib_nbextensions
-#RUN sudo pip install jupyter_nbextensions_configurator
+
+RUN git clone \
+               https://github.com/ipython-contrib/jupyter_contrib_nbextensions \
+               /home/main/jupyter_contrib_nbextensions
+RUN cp -rf \
+            /home/main/jupyter_contrib_nbextensions/src/jupyter_contrib_nbextensions/nbextensions/ \
+            /home/main/.ipython/nbextensions/               
 
 # jupyter nbextensions (enable)
 RUN jupyter-nbextensions_configurator enable --user
