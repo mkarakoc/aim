@@ -89,7 +89,7 @@ RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_
 RUN git clone \
                https://github.com/ipython-contrib/jupyter_contrib_nbextensions \
                /home/main/jupyter_contrib_nbextensions
-RUN mkdir /home/main/.ipython \
+RUN mkdir /home/main/.ipython
 
 RUN cp -rf \
             /home/main/jupyter_contrib_nbextensions/src/jupyter_contrib_nbextensions/nbextensions/ \
