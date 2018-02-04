@@ -129,7 +129,7 @@ RUN \
   && jupyter nbextension enable toggle_all_line_numbers/main  
   
 RUN \
-     mkdir githubFiles && 
+     mkdir githubFiles
 RUN \
      mv .travis.yml Dockerfile Dockerfile_tryout jupyter_notebook_config.py python_test.py githubFles \
   && mv githubFiles ../
