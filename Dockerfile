@@ -128,9 +128,9 @@ RUN \
   && jupyter nbextension enable runtools/main \   
   && jupyter nbextension enable toggle_all_line_numbers/main  
   
-RUN \
-     mkdir /home/main/notebooks \
-  && cd /home/main/notebooks \
-  && mkdir githubFiles \
-  && mv .travis.yml Dockerfile Dockerfile_tryout jupyter_notebook_config.py python_test.py githubFiles \
-  && mv githubFiles ../
+#RUN \
+#     mkdir /home/main/notebooks \
+#  && cd /home/main/notebooks \
+#  && mkdir githubFiles \
+#  && mv .travis.yml Dockerfile Dockerfile_tryout jupyter_notebook_config.py python_test.py githubFiles \
+#  && mv githubFiles ../
