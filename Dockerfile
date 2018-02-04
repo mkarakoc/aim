@@ -128,9 +128,9 @@ RUN \
   && jupyter nbextension enable runtools/main \   
   && jupyter nbextension enable toggle_all_line_numbers/main  
   
-RUN \
-     mkdir /home/main/notebooks \
-  && mkdir /home/main/notebooks/aim 
+#RUN \
+#     mkdir /home/main/notebooks \
+#  && mkdir /home/main/notebooks/aim 
 
 #RUN \
 #     mkdir /home/main/notebooks \
