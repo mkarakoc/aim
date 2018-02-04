@@ -183,7 +183,7 @@
 # c.NotebookApp.mathjax_url = ''
 
 # The directory to use for notebooks and kernels.
-# c.NotebookApp.notebook_dir = u''
+c.NotebookApp.notebook_dir = u'/home/main/aim/'
 
 # Whether to open in a browser after starting. The specific browser used is
 # platform dependent and determined by the python standard library `webbrowser`
