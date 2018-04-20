@@ -82,8 +82,11 @@ RUN sudo /home/main/anaconda2/envs/python3/bin/pip install --upgrade pip
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install python-flint
 
 # install plotly 
-RUN sudo /home/main/anaconda2/bin/pip install plotly
-RUN sudo /home/main/anaconda2/envs/python3/bin/pip install plotly
+#RUN sudo /home/main/anaconda2/bin/pip install plotly
+#RUN sudo /home/main/anaconda2/envs/python3/bin/pip install plotly
+# Found existing installation: nbformat 4.0.1
+# Cannot uninstall 'nbformat'. It is a distutils installed project and thus we cannot accurately 
+# determine which files belong to it which would lead to only a partial uninstall.
 
 # symengine python 2 and 3
 RUN sudo /home/main/anaconda2/bin/pip install symengine
