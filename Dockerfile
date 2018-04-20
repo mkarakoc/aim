@@ -37,7 +37,7 @@ RUN \
 # MPFR
 RUN \
      cd /home/main/pylibs \
-  && wget http://www.mpfr.org/mpfr-current/mpfr-4.0.0.tar.gz \
+  && wget http://www.mpfr.org/mpfr-current/mpfr-4.0.1.tar.gz \
   && tar -xvf mpfr-4.0.0.tar.gz \
   && rm -f mpfr-4.0.0.tar.gz \
   && cd ./mpfr-4.0.0/ && ./configure && make && sudo make install && cd ../../
