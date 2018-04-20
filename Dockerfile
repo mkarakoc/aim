@@ -38,9 +38,9 @@ RUN \
 RUN \
      cd /home/main/pylibs \
   && wget http://www.mpfr.org/mpfr-current/mpfr-4.0.1.tar.gz \
-  && tar -xvf mpfr-4.0.0.tar.gz \
-  && rm -f mpfr-4.0.0.tar.gz \
-  && cd ./mpfr-4.0.0/ && ./configure && make && sudo make install && cd ../../
+  && tar -xvf mpfr-4.0.1.tar.gz \
+  && rm -f mpfr-4.0.1.tar.gz \
+  && cd ./mpfr-4.0.1/ && ./configure && make && sudo make install && cd ../../
 
 # FLINT2
 #- git clone --depth=50 --branch=master https://github.com/fredrik-johansson/flint2.git
