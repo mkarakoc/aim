@@ -92,45 +92,45 @@ RUN sudo /home/main/anaconda2/envs/python3/bin/pip install python-flint
 RUN sudo /home/main/anaconda2/bin/pip install symengine
 RUN sudo /home/main/anaconda2/envs/python3/bin/pip install symengine
 
-# jupyter notebook
-RUN jupyter notebook --generate-config
-ADD jupyter_notebook_config.py jupyter_notebook_config.py
-RUN cp jupyter_notebook_config.py /home/main/.jupyter/
-
-# jupyter nbextensions (install)
-RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
-RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
-RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
-RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
-
-RUN git clone \
-               https://github.com/ipython-contrib/jupyter_contrib_nbextensions \
-               /home/main/jupyter_contrib_nbextensions
-RUN mkdir /home/main/.ipython
-
-RUN cp -rf \
-            /home/main/jupyter_contrib_nbextensions/src/jupyter_contrib_nbextensions/nbextensions/ \
-            /home/main/.ipython/
-
-# jupyter nbextensions (enable)
-RUN jupyter-nbextensions_configurator enable --user
-
-# enable spesific nbextension from start
-RUN \
-     jupyter nbextension enable hide_input_all/main \
-  && jupyter nbextension enable livemdpreview/livemdpreview \
-  && jupyter nbextension enable rubberband/main \   
-  && jupyter nbextension enable toc2/main \   
-  && jupyter nbextension enable varInspector/main \   
-  && jupyter nbextension enable varInspector/main \   
-  && jupyter nbextension enable collapsible_headings/main \   
-  && jupyter nbextension enable hinterland/hinterland \   
-  && jupyter nbextension enable snippets_menu/main \   
-  && jupyter nbextension enable execute_time/ExecuteTime \   
-  && jupyter nbextension enable hide_input/main \   
-  && jupyter nbextension enable runtools/main \   
-  && jupyter nbextension enable toggle_all_line_numbers/main  
-  
+#### jupyter notebook
+###RUN jupyter notebook --generate-config
+###ADD jupyter_notebook_config.py jupyter_notebook_config.py
+###RUN cp jupyter_notebook_config.py /home/main/.jupyter/
+###
+#### jupyter nbextensions (install)
+###RUN sudo /home/main/anaconda2/bin/pip install jupyter_contrib_nbextensions
+###RUN sudo /home/main/anaconda2/bin/pip install jupyter_nbextensions_configurator
+###RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_contrib_nbextensions
+###RUN sudo /home/main/anaconda2/envs/python3/bin/pip install jupyter_nbextensions_configurator
+###
+###RUN git clone \
+###               https://github.com/ipython-contrib/jupyter_contrib_nbextensions \
+###               /home/main/jupyter_contrib_nbextensions
+###RUN mkdir /home/main/.ipython
+###
+###RUN cp -rf \
+###            /home/main/jupyter_contrib_nbextensions/src/jupyter_contrib_nbextensions/nbextensions/ \
+###            /home/main/.ipython/
+###
+#### jupyter nbextensions (enable)
+###RUN jupyter-nbextensions_configurator enable --user
+###
+#### enable spesific nbextension from start
+###RUN \
+###     jupyter nbextension enable hide_input_all/main \
+###  && jupyter nbextension enable livemdpreview/livemdpreview \
+###  && jupyter nbextension enable rubberband/main \   
+###  && jupyter nbextension enable toc2/main \   
+###  && jupyter nbextension enable varInspector/main \   
+###  && jupyter nbextension enable varInspector/main \   
+###  && jupyter nbextension enable collapsible_headings/main \   
+###  && jupyter nbextension enable hinterland/hinterland \   
+###  && jupyter nbextension enable snippets_menu/main \   
+###  && jupyter nbextension enable execute_time/ExecuteTime \   
+###  && jupyter nbextension enable hide_input/main \   
+###  && jupyter nbextension enable runtools/main \   
+###  && jupyter nbextension enable toggle_all_line_numbers/main  
+###  
 #RUN \
 #     mkdir /home/main/notebooks \
 #  && mkdir /home/main/notebooks/aim 
