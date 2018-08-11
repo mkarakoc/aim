@@ -1,7 +1,5 @@
 FROM hesap/aimpy:latest
 
-RUN passwd --delete main
-
 USER main
 ENV HOME /home/main
 
