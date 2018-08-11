@@ -1,4 +1,4 @@
-FROM hesap/aimpy
+FROM hesap/aimpy:latest
 
 USER main
 
