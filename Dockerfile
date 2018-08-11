@@ -1,5 +1,5 @@
-FROM hesap/aimpy
-#FROM hesap/aimpy:latest
+#FROM hesap/aimpy
+FROM hesap/aimpy:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
