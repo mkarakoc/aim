@@ -1,3 +1,3 @@
 FROM hesap/aimpy
 
-#USER main
+USER main
