@@ -1,5 +1,7 @@
 FROM hesap/aimpy:latest
 
+MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
+
 USER main
 ENV HOME /home/main
 
