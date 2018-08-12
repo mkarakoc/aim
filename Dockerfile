@@ -1,5 +1,6 @@
 #FROM hesap/aimpy
-FROM hesap/aimpy:latest
+#FROM hesap/aimpy:latest
+FROM hesap/aim_trials
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
