@@ -18,6 +18,10 @@ ENV HOME = /home/main
 
 WORKDIR $HOME
 
+COPY start.sh /usr/local/bin/
+CMD ["start.sh"]
+
+
 USER main
 
 #RUN export LD_LIBRARY_PATH=/home/main/pylibs/flint2:/home/main/pylibs/arb:$LD_LIBRARY_PATH
