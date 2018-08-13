@@ -37,9 +37,3 @@ FROM hesap/aim_trials:latest
 #*****# Specify the default command to run
 #*****#CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
 
-USER darthvader
-WORKDIR /home/darthvader
-RUN chown -R 1111 /home/darthvader
-CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
-
-
