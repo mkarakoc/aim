@@ -3,6 +3,7 @@ FROM hesap/aimpy:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
+#https://stackoverflow.com/questions/27701930/add-user-to-docker-container
 RUN useradd -ms /bin/bash newuser
 USER newuser
 WORKDIR /home/newuser
