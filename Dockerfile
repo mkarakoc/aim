@@ -6,7 +6,7 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 RUN useradd -ms /bin/bash newuser
 USER newuser
 WORKDIR /home/newuser
-
+CMD cp /home/main/.bashrc /home/newuser
 # password of main user is Docker!
 # REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
 
