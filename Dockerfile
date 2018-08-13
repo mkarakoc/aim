@@ -8,6 +8,8 @@ USER root
 
 RUN passwd --delete main
 
+USER $NB_USER
+
 USER main
 
 ENV HOME /home/main
