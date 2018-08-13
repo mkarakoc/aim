@@ -11,7 +11,7 @@ RUN passwd --delete main
 ###USER $NB_USER
 
 USER main
-WORKDIR $MAIN_HOME
+WORKDIR /home/main
 
 ENV HOME /home/main
 
