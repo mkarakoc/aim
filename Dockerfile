@@ -13,7 +13,7 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 # REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
 
 RUN echo "main:Docker!" | chpasswd
-#ENV HOME=/home/main
+ENV HOME=/home/main
 WORKDIR $HOME
 
 USER main
