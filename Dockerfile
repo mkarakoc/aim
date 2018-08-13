@@ -1,5 +1,5 @@
-FROM hesap/aimpy:latest
-#FROM hesap/aim_trials
+#FROM hesap/aimpy:latest
+FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
@@ -14,3 +14,8 @@ WORKDIR /home/main
 USER main
 
 ADD flint_test.ipynb  /home/main/flint_test.ipynb
+###############
+# A BETTER EXAMPLE TO CREATE MYBINDER INTERACTIVE NOTEBOOKS
+###############
+###  https://github.com/jupyterhub/binder/blob/master/doc/sample_repos.md
+###############
