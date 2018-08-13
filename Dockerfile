@@ -1,5 +1,5 @@
-FROM hesap/aimpy:latest
-######FROM hesap/aim_trials:latest
+#FROM hesap/aimpy:latest
+FROM hesap/aim_trials:latest
 #####
 #####MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 #####
@@ -20,19 +20,19 @@ FROM hesap/aimpy:latest
 ########  https://github.com/jupyterhub/binder/blob/master/doc/sample_repos.md
 ####################
 
-ENV NB_USER jovyan
-ENV NB_UID 1001
-ENV HOME /home/${NB_USER}
-
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
-
-#COPY . ${HOME}
-#USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
-
-# Specify the default command to run
-#CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
+#*****ENV NB_USER jovyan
+#*****ENV NB_UID 1001
+#*****ENV HOME /home/${NB_USER}
+#*****
+#*****RUN adduser --disabled-password \
+#*****    --gecos "Default user" \
+#*****    --uid ${NB_UID} \
+#*****    ${NB_USER}
+#*****
+#*****#COPY . ${HOME}
+#*****#USER root
+#*****RUN chown -R ${NB_UID} ${HOME}
+#*****USER ${NB_USER}
+#*****
+#*****# Specify the default command to run
+#*****#CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
