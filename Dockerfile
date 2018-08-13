@@ -14,11 +14,11 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 # password of main user is Docker!
 # REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
 RUN echo "main:Docker!" | chpasswd
-ENV HOME = /home/main \
-    NB_UID = 1000
+ENV HOME = /home/main 
+
 WORKDIR $HOME
 
-USER $NB_UID
+USER main
 
 #RUN export LD_LIBRARY_PATH=/home/main/pylibs/flint2:/home/main/pylibs/arb:$LD_LIBRARY_PATH
 
