@@ -16,8 +16,8 @@ WORKDIR /home/newuser
 
 #USER main
 
-#CMD ["su", "-", "main", "-c", "/bin/bash"]
-#RUN export LD_LIBRARY_PATH=/home/main/pylibs/flint2:/home/main/pylibs/arb:$LD_LIBRARY_PATH
 
-ADD python_test.py /home/main/python_test.py
-ADD flint_test.ipynb  /home/main/flint_test.ipynb
+RUN export LD_LIBRARY_PATH=/home/main/pylibs/flint2:/home/main/pylibs/arb:$LD_LIBRARY_PATH
+
+ADD python_test.py /home/newuser/python_test.py
+ADD flint_test.ipynb  /home/newuser/flint_test.ipynb
