@@ -6,7 +6,8 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 RUN passwd --delete main
 
 USER main
-ENV HOME /home/main
+#ENV HOME /home/main
+ENV PATH $PATH:/home/main
 WORKDIR /home/main
 
 ADD python_test.py /home/main/python_test.py
