@@ -3,7 +3,8 @@ FROM hesap/aimpy:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
-RUN passwd --delete main
+#RUN passwd --delete main
+RUN echo "main:Docker!" | chpasswd
 
 USER main
 #ENV HOME /home/main
