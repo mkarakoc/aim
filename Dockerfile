@@ -5,6 +5,7 @@ FROM hesap/aimpy:latest
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
 USER root
+RUN touch /root/.bashrc
 
 RUN passwd --delete main
 
