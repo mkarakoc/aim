@@ -6,6 +6,8 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
 USER root
 
+RUN passwd --delete main
+
 USER main
 
 ENV HOME /home/main
