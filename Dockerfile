@@ -8,9 +8,10 @@ USER root
 
 RUN passwd --delete main
 
-USER $NB_USER
+###USER $NB_USER
 
 USER main
+WORKDIR $MAIN_HOME
 
 ENV HOME /home/main
 
