@@ -18,7 +18,7 @@ ENV HOME = /home/main
 
 WORKDIR $HOME
 
-COPY start.sh /usr/local/bin/
+#COPY start.sh /usr/local/bin/
 #CMD ["start.sh"]
 
 
