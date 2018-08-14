@@ -19,6 +19,7 @@ WORKDIR /home/${NB_USER}
 
 
 
+# adduser --disabled-password --gecos "Default user" --uid 1000 jovyan
 
 #*******FROM hesap/jupyter
 #*******FROM hesap/aimpy:latest
