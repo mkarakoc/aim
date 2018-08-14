@@ -1,6 +1,6 @@
 # https://docs.travis-ci.com/user/languages/python/
 
-dist: trusty
+dist: bionic
 
 language: python
 python:
