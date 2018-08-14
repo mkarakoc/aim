@@ -1,5 +1,5 @@
-#FROM hesap/jupyter
-FROM hesap/aimpy:jovyan
+FROM hesap/jupyter
+#FROM hesap/aimpy:latest
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
@@ -8,7 +8,7 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 #ENV NB_UID 1000
 
 #One or more build-args [NB_USER NB_UID] were not consumed
-ARG NB_USER=jovyan
+ARG NB_USER=main
 ARG NB_UID=1000
 ENV HOME /home/${NB_USER}
 
@@ -19,4 +19,4 @@ USER ${NB_USER}
 
 WORKDIR /home/${NB_USER}
 
-CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
+#CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
