@@ -11,7 +11,7 @@ ENV HOME /home/${NB_USER}
 
 USER root
 RUN chown -R ${NB_UID} ${HOME}
-RUN echo "main:Docker!" | chpasswd
+RUN echo "jovyan:Docker!" | chpasswd
 
 USER ${NB_USER}
 
