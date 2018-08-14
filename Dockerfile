@@ -1,5 +1,5 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:path
+FROM hesap/aimpy:bin
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
