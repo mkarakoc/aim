@@ -13,7 +13,7 @@ CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pyli
 WORKDIR /home/main 
 #####
 USER main
-RUN export LD_LIBRARY_PATH="/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"
+CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"]
 #####
 #####ADD flint_test.ipynb  /home/main/flint_test.ipynb
 ####################
