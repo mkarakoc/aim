@@ -12,4 +12,6 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
+WORKDIR /home/${NB_USER}
+
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
