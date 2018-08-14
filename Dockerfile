@@ -4,7 +4,6 @@ FROM hesap/aimpy
 #####MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 #####
 USER root
-CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"]
 #####
 ###### password of main user is Docker!
 ###### REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
@@ -13,7 +12,8 @@ CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pyli
 WORKDIR /home/main 
 #####
 USER main
-CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"]
+WORKDIR /home/main
+#CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"]
 #####
 #####ADD flint_test.ipynb  /home/main/flint_test.ipynb
 ####################
