@@ -16,8 +16,8 @@ RUN echo "jovyan:Docker!" | chpasswd
 USER ${NB_USER}
 
 ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
-ENV BASH_ENV = /home/${NB_USER}/.bashrc
-ENV TERM = bash
+ENV BASH_ENV='/home/${NB_USER}/.bashrc'
+ENV TERM='bash'
 WORKDIR /home/${NB_USER}
 
 
