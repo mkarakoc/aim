@@ -1,5 +1,5 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:jovyan_20180814_1812
+FROM hesap/aimpy:jovyan_20180814_1827
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
@@ -13,7 +13,7 @@ ENV HOME /home/${NB_USER}
 #RUN chown -R ${NB_UID} ${HOME}
 RUN echo "jovyan:Docker!" | chpasswd
 
-#USER ${NB_USER}
+USER ${NB_USER}
 
 WORKDIR /home/${NB_USER}
 
