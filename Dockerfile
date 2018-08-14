@@ -19,7 +19,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb
 
 WORKDIR /home/${NB_USER}
 
-
+ADD flint_test.ipynb  /home/${NB_USER}/flint_test.ipynb
 
 # adduser --disabled-password --gecos "Default user" --uid 1000 jovyan
 
