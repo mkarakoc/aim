@@ -15,6 +15,7 @@ RUN echo "jovyan:Docker!" | chpasswd
 
 USER ${NB_USER}
 
+ENV PATH "${PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
 #ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
 
 WORKDIR /home/${NB_USER}
