@@ -1,5 +1,5 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:jovyan_20180814_2112
+FROM hesap/aimpy:jovyan_20180814_2117
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
@@ -15,7 +15,7 @@ RUN echo "jovyan:Docker!" | chpasswd
 
 USER ${NB_USER}
 
-ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
+#ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
 
 WORKDIR /home/${NB_USER}
 
