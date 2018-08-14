@@ -15,7 +15,9 @@ USER main
 WORKDIR /home/main
 #CMD ["export", "LD_LIBRARY_PATH", "=", "/home/main/pylibs/flint2:/home/main/pylibs/arb:/home/main/pylibs/flint2:/home/main/pylibs/arb:"]
 #####
-#####ADD flint_test.ipynb  /home/main/flint_test.ipynb
+ADD flint_test.ipynb  /home/main/flint_test.ipynb
+
+
 ####################
 ###### A BETTER EXAMPLE TO CREATE MYBINDER INTERACTIVE NOTEBOOKS
 ####################
