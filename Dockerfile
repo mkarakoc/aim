@@ -15,10 +15,11 @@ RUN echo "jovyan:Docker!" | chpasswd
 
 USER ${NB_USER}
 
-#ENV PYTHONPATH "${PYTHONPATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
 ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
-
+ENV BASH_ENV = /home/${NB_USER}/.bashrc
 WORKDIR /home/${NB_USER}
+
+
 
 ADD flint_test.ipynb  /home/${NB_USER}/flint_test.ipynb
 
