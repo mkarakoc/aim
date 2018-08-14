@@ -1,5 +1,5 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:jovyan_20180814_1722
+FROM hesap/aimpy:jovyan_20180814_1756
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
@@ -9,11 +9,11 @@ ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV HOME /home/${NB_USER}
 
-USER root
-RUN chown -R ${NB_UID} ${HOME}
+#USER root
+#RUN chown -R ${NB_UID} ${HOME}
 RUN echo "jovyan:Docker!" | chpasswd
 
-USER ${NB_USER}
+#USER ${NB_USER}
 
 WORKDIR /home/${NB_USER}
 
