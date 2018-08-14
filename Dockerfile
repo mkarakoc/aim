@@ -1,4 +1,4 @@
-3FROM hesap/jupyter
+#FROM hesap/jupyter
 FROM hesap/aimpy:latest
 #FROM hesap/aim_trials:latest
 
