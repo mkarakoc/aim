@@ -1,5 +1,5 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:jovyan_20180814_1827
+FROM hesap/aimpy:jovyan_20180814_2112
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
