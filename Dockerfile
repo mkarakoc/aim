@@ -4,15 +4,23 @@ FROM hesap/jupyter
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
-ENV NB_USER jovyan
-ENV NB_UID 2222
-ENV HOME /home/${NB_USER}
+###################
+USER root
+###################
 
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
+# See https://github.com/sagemathinc/cocalc/issues/921
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV TERM screen
 
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
+## create password-less user
+RUN useradd -m main2 && echo "main2:mai2n" | chpasswd && adduser main2 sudo
+RUN echo "main2:main2" | chpasswd && adduser main2 sudo
 
+#### without password
+RUN passwd --delete main2
+
+#### MAIN USER ####
+USER main2
+###################
