@@ -9,7 +9,7 @@ ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV HOME /home/${NB_USER}
 
-#USER root
+USER root
 #RUN chown -R ${NB_UID} ${HOME}
 RUN echo "jovyan:Docker!" | chpasswd
 
