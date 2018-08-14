@@ -1,9 +1,11 @@
 #FROM hesap/jupyter
-FROM hesap/aimpy:localbin
+FROM hesap/aimpy:joyvan
 #FROM hesap/aim_trials:latest
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
-USER main
+ENV NB_USER jovyan
+ENV NB_UID 1000
+ENV HOME /home/${NB_USER}
 
-WORKDIR /home/main
+USER ${NB_USER}
