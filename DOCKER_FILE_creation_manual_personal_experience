@@ -109,7 +109,7 @@ INSTALL LIBRARIES needed by FLINT
 ________________________________________________________________
 ----------------------------------------------------------------
 # create a folder to store library files and folders
-1. mkdir /home/main/pylibs
+1. mkdir /home/jovyan/pylibs
 
 # download or clone: gmplib, mpfr, flint2, and arb files
 1. wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
@@ -132,7 +132,7 @@ ________________________________________________________________
 
 # install python-flint for python2
 1. cd ./python-flint
-2. sudo python ./setup.py build_ext --include-dirs=/home/main/pylibs/flint2:/home/main/pylibs/arb --library-dirs=/home/main/pylibs/flint2:/home/main/pylibs/arb
+2. sudo python ./setup.py build_ext --include-dirs=/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb --library-dirs=/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb
 3. sudo python setup.py install && cd ..
 4. export LD_LIBRARY_PATH=/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb:$LD_LIBRARY_PATH
     # This last step does not work for mybinder.org look at Dockerfile explanation below.
@@ -149,7 +149,7 @@ ________________________________________________________________
 1. # to reach jupyter server outside of the Docker container
    sudo docker run -p 8888:8888 -it --name aimpy hesap/aim_trials
 
-2. # add following lines to: /home/main/.jupyter/jupyter_notebook_config.py
+2. # add following lines to: /home/jovyan/.jupyter/jupyter_notebook_config.py
    c = get_config()
    c.NotebookApp.ip = '172.17.0.58'
    c.NotebookApp.open_browser = False
@@ -162,9 +162,9 @@ ________________________________________________________________
 4. # to see which jupyter servers (kernels) are on
    lsof -n -i4TCP:8888
    # output example:
-    >>> COMMAND   PID USER   FD   TYPE    DEVICE SIZE/OFF NODE NAME
-    >>> jupyter-n  22 main    3u  IPv4 130357247      0t0  TCP 172.17.0.58:8888 (LISTEN)
-    >>> jupyter-n  22 main    9u  IPv4 130361442      0t0  TCP 172.17.0.58:8888->10.7.1.69:50753 (ESTABLISHED)
+    >>> COMMAND   PID USER     FD   TYPE    DEVICE SIZE/OFF NODE NAME
+    >>> jupyter-n  22 jovyan    3u  IPv4 130357247      0t0  TCP 172.17.0.58:8888 (LISTEN)
+    >>> jupyter-n  22 jovyan    9u  IPv4 130361442      0t0  TCP 172.17.0.58:8888->10.7.1.69:50753 (ESTABLISHED)
 
 5. # kill servers if you wish
    kill -9  [PID]
@@ -221,7 +221,7 @@ MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 # becom root to change jovyan password
 USER root
 
-### password of main user is Docker!
+### password of jovyan user is Docker!
 ### REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
 RUN echo "jovyan:Docker!" | chpasswd
 
