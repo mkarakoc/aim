@@ -14,4 +14,4 @@ ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/
 ENV SHELL "/bin/bash"
 WORKDIR /home/jovyan
 
-ADD flint_test.ipynb  /home/${NB_USER}/flint_test.ipynb
+ADD flint_test.ipynb  /home/jovyan/flint_test.ipynb
