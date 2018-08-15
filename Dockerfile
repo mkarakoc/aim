@@ -1,4 +1,4 @@
-FROM hesap/aimpy:jovyan_stable_latest_20180815_1205
+FROM hesap/aimpy:jovyan_stable_latest_20180815_1213
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
