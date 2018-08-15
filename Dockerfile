@@ -1,4 +1,4 @@
-FROM hesap/jupyter:jovyan_stable_latest_20180815_1213
+FROM hesap/jupyter:jovyan_stable_latest_20180815_1429
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
