@@ -28,5 +28,5 @@ WORKDIR /home/jovyan
 
 # to test whether flint library is installed or not
 ADD flint_test.ipynb  /home/jovyan/flint_test.ipynb
-ADD python_test.py    /home/jovyan/flint_test.ipynb
+ADD python_test.py    /home/jovyan/python_test.py
 
