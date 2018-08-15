@@ -15,12 +15,11 @@ RUN echo "jovyan:Docker!" | chpasswd
 
 USER ${NB_USER}
 
-#ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
+ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/pylibs/arb"
+ENV TERM "bash"
 WORKDIR /home/${NB_USER}
 
 ADD flint_test.ipynb  /home/${NB_USER}/flint_test.ipynb
-
-CMD ["export", "TERM", "=", "'bash'"]
 
 # adduser --disabled-password --gecos "Default user" --uid 1000 jovyan
 
