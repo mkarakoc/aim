@@ -1,6 +1,6 @@
 # link of the Docker container
 # https://hub.docker.com/r/hesap/aimpy/tags/
-FROM hesap/aimpy:jovyan_stable_latest_20180815_1213
+FROM hesap/aimpy:jovyan_stable_20200211_1449
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
@@ -10,6 +10,12 @@ USER root
 ### password of main user is Docker!
 ### REF: https://stackoverflow.com/questions/28721699/root-password-inside-a-docker-container
 RUN echo "jovyan:Docker!" | chpasswd
+
+# to test whether flint library is installed or not
+ADD flint_test.ipynb  /home/jovyan/flint_test.ipynb
+ADD python_test.py    /home/jovyan/python_test.py
+ADD examples    /home/jovyan/examples
+RUN chown -R jovyan:jovyan /home/jovyan/examples
 
 # jovyan user name somehow chosen by someone that i do not know, yet. kind of forced to use!
 # REF: https://mybinder.readthedocs.io/en/latest/dockerfile.html#preparing-your-dockerfile
@@ -22,11 +28,11 @@ ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:/home/jovyan/pylibs/flint2:/home/jovyan/
 # force the container to use bash
 # REF: https://stackoverflow.com/questions/33467098/how-can-the-terminal-in-jupyter-automatically-run-bash-instead-of-sh
 ENV SHELL "/bin/bash"
+ENV LANG en_US.UTF-8
 
 # working directory
 WORKDIR /home/jovyan
 
-# to test whether flint library is installed or not
-ADD flint_test.ipynb  /home/jovyan/flint_test.ipynb
-ADD python_test.py    /home/jovyan/python_test.py
-ADD examples    /home/jovyan/examples
+# enable spesific nbextension from start
+RUN jupyter nbextension enable equation-numbering/main
+
