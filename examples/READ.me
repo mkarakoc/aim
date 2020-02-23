@@ -1,0 +1,59 @@
+##*********************************************************************************
+##    Copyright (C) 2020, 2023 Mesut Karakoc
+##
+##    AIMpy is free software: you can redistribute it and/or modify
+##    it under the terms of the GNU General Public License as published by
+##    the Free Software Foundation, either version 3 of the License, or
+##    (at your option) any later version.
+##
+##    AIMpy is distributed in the hope that it will be useful,
+##    but WITHOUT ANY WARRANTY; without even the implied warranty of
+##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##    GNU General Public License for more details.
+##
+##    You should have received a copy of the GNU General Public License
+##    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+##*********************************************************************************
+
+AIMpy program folder contains "asymptotic.py" and example ".ipynb" files.
+If the following instructions are used, the examples will be ready to rerun.
+Updates for the program can be followed from https://github.com/mkarakoc/aim.
+
+HOW TO INSTALL LIBRARIES needed by FLINT
+__________________________________________________________________
+Be aware of none Pythonic packages version number may need update.
+------------------------------------------------------------------
+
+# create a folder to store library files and folders
+1. mkdir /home/main/pylibs
+
+# download or clone: gmplib, mpfr, flint2, and arb files
+1. wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
+2. wget http://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.gz
+3. git clone https://github.com/fredrik-johansson/flint2.git
+4. git clone https://github.com/fredrik-johansson/arb.git
+5. git clone https://github.com/fredrik-johansson/python-flint.git
+
+# install m4
+sudo apt-get install m4
+
+# install gmplib
+1. tar -xvf gmp-6.1.2.tar.bz2
+2. cd ./gmp-6.1.2/ && ./configure && make && sudo make install && cd ..
+
+# install mpfr
+1. tar -xvf mpfr-4.0.2.tar.gz
+2. cd ./mpfr-4.0.2/ && ./configure && make && sudo make install && cd ..
+
+# install flint2 and arb
+1. cd ./flint2/ && ./configure && make && sudo make install && cd ..
+2. cd ./arb/ && ./configure && make && sudo make install && cd ..
+
+# install python-flint for python2
+1. sudo pip3 install Cython
+2. sudo pip3 install python-flint
+3. export LD_LIBRARY_PATH=/home/main/pylibs/flint2:/home/main/pylibs/arb:$LD_LIBRARY_PATH
+4. put PATH in 3. to end of ".bashrc" file.
+
+________________________________________________________________
+----------------------------------------------------------------
