@@ -1,6 +1,6 @@
 # link of the Docker container
 # https://hub.docker.com/r/hesap/aimpy/tags/
-FROM hesap/aimpy:jovyan_stable_latest_202002231945
+FROM hesap/aimpy:jovyan_stable_latest_202002232326
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
@@ -12,9 +12,9 @@ USER root
 RUN echo "jovyan:Docker!" | chpasswd
 
 # to test whether flint library is installed or not
-ADD flint_test.ipynb  /home/jovyan/flint_test.ipynb
-ADD python_test.py    /home/jovyan/python_test.py
+ADD tests       /home/jovyan/tests
 ADD examples    /home/jovyan/examples
+RUN chown -R jovyan:jovyan /home/jovyan/tests
 RUN chown -R jovyan:jovyan /home/jovyan/examples
 
 # jovyan user name somehow chosen by someone that i do not know, yet. kind of forced to use!
