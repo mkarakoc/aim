@@ -1,6 +1,6 @@
 # link of the Docker container
 # https://hub.docker.com/r/hesap/
-FROM hesap/ubuntubf:main_202002241455
+FROM hesap/aimpy:main202002250009
 
 MAINTAINER Mesut Karakoç <mesudkarakoc@gmail.com>
 
