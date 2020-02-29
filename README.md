@@ -1,48 +1,53 @@
+
 # Asymptotic iteration method for  <br> eigenvalue problems (AIM)
 
 To read about the AIM use the following links:  
 1. https://arxiv.org/abs/math-ph/0309066
 2. http://iopscience.iop.org/article/10.1088/0305-4470/36/47/008/meta
 
-## Live Jupyter notebooks on mybinder.org
+### Live Jupyter notebooks on mybinder.org
+Click the button below to run Jupyter notebook on mybinder and try examples given in **/examples** folder.  
 [![Binder](https://mybinder.org/badge_logo.svg)](http://mybinder.org:/repo/mkarakoc/aim)
 
 <!--- 
 ## Travis-ci
 [![Build Status](https://travis-ci.org/mkarakoc/aim.svg?branch=master)](https://travis-ci.org/mkarakoc/aim) 
 --->
+## How to run the code in your local PC
+You can use one of the following methods below.
+### 1.  Use the docker image
 
+### 2. Install the libraries
 **/examples** folder contains "asymptotic.py" and the example ".ipynb" files.
 If the following instructions are followed, the examples will be ready to run 
-in your local machine with an Ubuntu Operating System.
+in your local machine with an Ubuntu (18.04) Operating System.
 
-# Installation of the libraries 
-### create a folder to store the library files
+#### create a folder to store the library files
 	~$ mkdir /home/(user)/pylibs
 	~$ cd /home/(user)/pylibs
-### download or clone: gmp, mpfr, flint2, and arb files
+#### download or clone: gmp, mpfr, flint2, and arb files
 	~$ wget https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2
 	~$ wget http://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.gz
 	~$ git clone https://github.com/fredrik-johansson/flint2.git
 	~$ git clone https://github.com/fredrik-johansson/arb.git
 	~$ git clone https://github.com/fredrik-johansson/python-flint.git
 
-### install m4
+#### install m4
 	~$ sudo apt-get install m4
 
-### install gmp
+#### install gmp
 	~$ tar -xvf gmp-6.1.2.tar.bz2
 	~$ cd ./gmp-6.1.2/ && ./configure && make && sudo make install && cd ..
 
-### install mpfr
+#### install mpfr
 	~$ tar -xvf mpfr-4.0.2.tar.gz
 	~$ cd ./mpfr-4.0.2/ && ./configure && make && sudo make install && cd ..
 
-### install flint2 and arb
+#### install flint2 and arb
 	~$ cd ./flint2/ && ./configure && make && sudo make install && cd ..
 	~$ cd ./arb/ && ./configure && make && sudo make install && cd ..
 
-## install python-flint for python 2 or python 3
+### install python-flint for python 2 or python 3
 	~$ sudo pip install Cython
 	~$ cd ./python-flint  
 	~$ sudo python ./setup.py build_ext --include-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb --library-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb  
