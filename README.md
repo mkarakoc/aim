@@ -10,9 +10,9 @@ AIM References:
 ## Travis-ci
 [![Build Status](https://travis-ci.org/mkarakoc/aim.svg?branch=master)](https://travis-ci.org/mkarakoc/aim)
 
-AIMpy program folder contains "asymptotic.py" and example ".ipynb" files.
-If the following instructions are used, the examples will be ready to rerun.
-Updates for the program can be followed from https://github.com/mkarakoc/aim.
+**/examples** folder contains "asymptotic.py" and the example ".ipynb" files.
+If the following instructions are followed, the examples will be ready to run 
+in your local machine with an Ubuntu Operating System.
 
 # Installation of the libraries 
 ### create a folder to store the library files
