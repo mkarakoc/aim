@@ -16,7 +16,7 @@ Click the button below to run Jupyter notebook on mybinder and try examples give
 ## How to run the code in your local PC
 You can use one of the following methods below.
 ### 1.  Use the docker image
-Please first read about **git** and **docker** if you have no experience.
+Please first read about **git** and **docker** if you have no experience.  
 	~$ sudo apt install git docker
 	~$ git clone https://github.com/mkarakoc/aim.git
 	~$ cd aim
