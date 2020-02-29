@@ -6,7 +6,7 @@ AIM References:
 
 
 ## Jupyter notebooks
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/mkarakoc/aim)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mkarakoc/aim)
 
 ## Travis-ci
 [![Build Status](https://travis-ci.org/mkarakoc/aim.svg?branch=master)](https://travis-ci.org/mkarakoc/aim)
