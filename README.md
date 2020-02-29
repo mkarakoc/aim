@@ -1,4 +1,5 @@
-## Asymptotic iteration method for eigenvalue problems (AIM)
+# Asymptotic iteration method for  <br> eigenvalue problems (AIM)
+
 To read about the AIM use the following links:  
 1. https://arxiv.org/abs/math-ph/0309066
 2. http://iopscience.iop.org/article/10.1088/0305-4470/36/47/008/meta
