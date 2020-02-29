@@ -6,8 +6,8 @@ To read about the AIM use the following links:
 ## Live Jupyter notebooks on mybinder.org
 [![Binder](https://mybinder.org/badge_logo.svg)](http://mybinder.org:/repo/mkarakoc/aim)
 
-[//]: <> ( ## Travis-ci
-[![Build Status](https://travis-ci.org/mkarakoc/aim.svg?branch=master)](https://travis-ci.org/mkarakoc/aim))
+[comment]: <> ( ## Travis-ci)
+[![Build Status](https://travis-ci.org/mkarakoc/aim.svg?branch=master)](https://travis-ci.org/mkarakoc/aim)
 
 **/examples** folder contains "asymptotic.py" and the example ".ipynb" files.
 If the following instructions are followed, the examples will be ready to run 
