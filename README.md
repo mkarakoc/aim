@@ -15,14 +15,17 @@ Click the button below to run Jupyter notebook on mybinder and try examples give
 --->
 ## How to run the code in your local PC
 You can use one of the following methods below. 
-Please first read about **git** and **docker** for the 1st method if you have no experience.  
+
 ### 1.  Use the docker image
+Please first read about **git** and **docker** if you have no experience.  
+
 	~$ sudo apt install git docker
 	~$ git clone https://github.com/mkarakoc/aim.git
 	~$ cd aim
 	~$ sudo docker build -t jupyter_docker .
 	~$ sudo docker run -ti jupyter_docker
 If everything successful you will see a link similar to the following:
+
 	http://172.17.0.2:8080/?token=...
 
 ### 2. Install the libraries
