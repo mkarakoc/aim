@@ -28,6 +28,8 @@ If everything successful you will see a link similar to the following:
 
 	http://172.17.0.2:8080/?token=...
 
+Open this link in your preferred browser and you are ready to go!
+
 ### 2. Install the libraries
 **/examples** folder contains "asymptotic.py" and the example ".ipynb" files.
 If the following instructions are followed, the examples will be ready to run 
