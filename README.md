@@ -36,6 +36,8 @@ Open this link in your preferred browser and you are ready to go!
 If the following instructions are followed, the examples will be ready to run 
 in your local machine with an Ubuntu (18.04) Operating System.
 
+The **(user)** in the instructions below is user name of your (Ubuntu) operating system's current user.
+
 #### create a folder to store the library files
 	~$ mkdir /home/(user)/pylibs
 	~$ cd /home/(user)/pylibs
@@ -62,6 +64,8 @@ in your local machine with an Ubuntu (18.04) Operating System.
 	~$ cd ./arb/ && ./configure && make && sudo make install && cd ..
 
 ### install python-flint for python 2 or python 3
+Change "python" with "python2" or "python3" depending on which version you want to use.
+
 	~$ sudo pip install Cython
 	~$ cd ./python-flint  
 	~$ sudo python ./setup.py build_ext --include-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb --library-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb  
