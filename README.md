@@ -15,7 +15,7 @@ If the following instructions are used, the examples will be ready to rerun.
 Updates for the program can be followed from https://github.com/mkarakoc/aim.
 
 # Installation of the libraries 
-### create a folder to store library files
+### create a folder to store the library files
 	~$ mkdir /home/(user)/pylibs
 	~$ cd /home/(user)/pylibs
 ### download or clone: gmp, mpfr, flint2, and arb files
