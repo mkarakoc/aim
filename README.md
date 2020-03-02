@@ -64,7 +64,7 @@ The **(user)** in the instructions below is user name of your (Ubuntu) operating
 	~$ cd ./arb/ && ./configure && make && sudo make install && cd ..
 
 ### install python-flint for python 2 or python 3
-Change "python" with "python2" or "python3" depending on which version you want to use.
+Change "python" and "pip" with "python2" and "pip2" or "python3" and "pip3" depending on which version you want to use.
 
 	~$ sudo pip install Cython
 	~$ cd ./python-flint  
