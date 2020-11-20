@@ -23,7 +23,7 @@ Click the button below to run Jupyter notebook on mybinder and try examples give
 --->
 ## How to run the code in your local PC
 You can use one of the following methods below. Both methods are only tested on a machine with
-an Ubuntu (18.04) Operation System. 
+an Ubuntu (18.04) Operating System. 
 
 ### 1.  Use the docker image
 Please first read about **git** and **docker** if you have no experience.  
