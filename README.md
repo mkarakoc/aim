@@ -6,8 +6,8 @@
 
 To read more about AIMpy:  
 
-**International Journal of Modern Physics C**
-**https://doi.org/10.1142/S0129183121500170**
+**International Journal of Modern Physics C**  
+**https://doi.org/10.1142/S0129183121500170**  
 
 To read more about the AIM use the following links:
 1. https://arxiv.org/abs/math-ph/0309066
