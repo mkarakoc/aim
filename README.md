@@ -1,7 +1,14 @@
 
+<!--- 
 # Asymptotic iteration method for  <br> eigenvalue problems (AIM)
+--->
+# AIMpy: A Python code to solve Schrödinger-like equations with the asymptotic iteration method
 
-To read about the AIM use the following links:  
+To read more about AIMpy:
+**International Journal of Modern Physics C**
+**https://doi.org/10.1142/S0129183121500170**
+
+To read more about the AIM use the following links:
 1. https://arxiv.org/abs/math-ph/0309066
 2. http://iopscience.iop.org/article/10.1088/0305-4470/36/47/008/meta
 
@@ -69,7 +76,7 @@ Change "python" and "pip" with "python2" and "pip2" or "python3" and "pip3" depe
 	~$ sudo pip install Cython
 	~$ cd ./python-flint  
 	~$ sudo python ./setup.py build_ext --include-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb --library-dirs=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb  
-	~$ 4. sudo python setup.py install && cd ..  
+	~$ sudo python setup.py install && cd ..  
 	~$ export LD_LIBRARY_PATH=/home/(user)/pylibs/flint2:/home/(user)/pylibs/arb:$LD_LIBRARY_PATH
 	## put "LD_LIBRARY_PATHPATH" into ".bashrc" of (user) to make PATH permanent
 _____________________________
