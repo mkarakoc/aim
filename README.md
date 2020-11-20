@@ -4,7 +4,8 @@
 --->
 # AIMpy: A Python code to solve Schrödinger-like equations with the asymptotic iteration method
 
-To read more about AIMpy:
+To read more about AIMpy:  
+
 **International Journal of Modern Physics C**
 **https://doi.org/10.1142/S0129183121500170**
 
