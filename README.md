@@ -15,7 +15,12 @@ To read more about the AIM use the following links:
 
 ### Live Jupyter notebooks on mybinder.org
 Click the button below to run Jupyter notebook on mybinder and try examples given in **/examples** folder.  
-[![Binder](https://mybinder.org/badge_logo.svg)](http://mybinder.org:/repo/mkarakoc/aim)
+
+| Interactive  | Static   |
+|---|---|
+| [![Binder](https://mybinder.org/badge_logo.svg)](http://mybinder.org:/repo/mkarakoc/aim)  | [<img width=100 src='https://nbviewer.jupyter.org/static/img/nav_logo.svg'>](https://nbviewer.jupyter.org/github/mkarakoc/aim/tree/master/examples/)  |
+
+
 
 <!--- 
 ## Travis-ci
