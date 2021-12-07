@@ -4,12 +4,13 @@
 --->
 # AIMpy: A Python code to solve Schrödinger-like equations with the asymptotic iteration method
 
-To read more about AIMpy:  
+To read about AIMpy:  
 
 **International Journal of Modern Physics C**  
 **https://doi.org/10.1142/S0129183121500170**  
+https://arxiv.org/abs/2112.02934
 
-To read more about the AIM use the following links:
+To read about the AIM use the following links:
 1. https://arxiv.org/abs/math-ph/0309066
 2. http://iopscience.iop.org/article/10.1088/0305-4470/36/47/008/meta
 
